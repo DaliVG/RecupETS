@@ -73,7 +73,7 @@ namespace UnitTestCalculadora
         public void TestMethodInfinito1()
         {
             // Arrange 
-            double numberOne = +00;
+            double numberOne = double.PositiveInfinity;
             double numberTwo = -135;
 
             // Act
