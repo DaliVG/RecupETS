@@ -80,7 +80,7 @@ namespace UnitTestCalculadora
             string error = "";
             double resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
             // Assert
-            Assert.AreEqual(double.NaN, Convert.ToDouble(resultMulti));
+            Assert.AreEqual(double.PositiveInfinity, resultMulti);
         }
 
         [TestMethod]
