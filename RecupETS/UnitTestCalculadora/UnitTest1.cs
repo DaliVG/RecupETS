@@ -27,7 +27,7 @@ namespace UnitTestCalculadora
         {
             // Arrange 
             double numberOne = double.MaxValue;
-            double numberTwo = 1;
+            double numberTwo = double.MaxValue;
 
             // Act
             string error = "";
@@ -59,7 +59,7 @@ namespace UnitTestCalculadora
         {
             // Arrange 
             double numberOne = 123.45;
-            double numberTwo = -135;
+            double numberTwo = 135;
 
             // Act
             string error = "";
@@ -95,7 +95,7 @@ namespace UnitTestCalculadora
             double resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
             double resultadoCorrecto = 1.476190476190476;
             // Assert
-            Assert.AreEqual(resultDiv, resultadoCorrecto);
+            Assert.AreEqual(Convert.ToDecimal(resultDiv), Convert.ToDecimal(resultadoCorrecto));
         }
     }
 }
