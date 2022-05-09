@@ -38,18 +38,7 @@ namespace RecupETS
             }
             catch (Exception)
             {
-                if (resultResta > double.MaxValue)
-                {
-                    error = ("Fuera de rango superior.");
-                }
-                else
-                {
-                    if (resultResta < double.MinValue)
-                    {
-                        error = ("Fuera de rango inferior.");
-                    }
-
-                }
+                error = ("resultado fuera de rango de memoria");
             }
             return resultResta;
         }
@@ -64,19 +53,7 @@ namespace RecupETS
             }
             catch (Exception)
             {
-                if (resultMulti > double.MaxValue)
-                {
-                    error = ("Fuera de rango superior.");
-                }
-                else
-                {
-                    if (resultMulti < double.MinValue)
-                    {
-                        error = ("Fuera de rango inferior.");
-                    }
-
-                }
-
+                error = ("resultado fuera de rango de memoria");
 
             }
 
@@ -95,18 +72,7 @@ namespace RecupETS
                 }
                 catch (Exception)
                 {
-                    if (resultDiv > double.MaxValue)
-                    {
-                        error = ("Fuera de rango superior.");
-                    }
-                    else
-                    {
-                        if (resultDiv < double.MinValue)
-                        {
-                            error = ("Fuera de rango inferior.");
-                        }
-
-                    }
+                    error = ("resultado fuera de rango de memoria");
                 }
             }
             else
