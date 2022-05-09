@@ -74,7 +74,7 @@ namespace UnitTestCalculadora
         {
             // Arrange 
             double numberOne = double.PositiveInfinity;
-            double numberTwo = -135;
+            double numberTwo = 135;
 
             // Act
             string error = "";
@@ -87,13 +87,13 @@ namespace UnitTestCalculadora
         public void TestMethodDiv1()
         {
             // Arrange 
-            double numberOne = 48.2;
-            double numberTwo = 2.25;
+            double numberOne = 3.1;
+            double numberTwo = 2.1;
 
             // Act
             string error = "";
             double resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
-            double resultadoCorrecto = 21.4222222222222;
+            double resultadoCorrecto = 1.476190476190476;
             // Assert
             Assert.AreEqual(resultDiv, resultadoCorrecto);
         }
