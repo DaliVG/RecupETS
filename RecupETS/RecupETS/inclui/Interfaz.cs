@@ -21,10 +21,10 @@ namespace RecupETS
                 opcion = Lectura();
                 switch (opcion)
                 {
-                    case '1': Calculadora.Suma(numberOne, numberTwo); break;
-                    case '2': Calculadora.Resta(numberOne, numberTwo); break;
-                    case '3': Calculadora.Multiplicacion(numberOne, numberTwo); break;
-                    case '4': Calculadora.Division(numberOne, numberTwo); break;
+                    case '1': Controlador.DataSuma(numberOne, numberTwo); break;
+                    case '2': Controlador.DataResta(numberOne, numberTwo); break;
+                    case '3': Controlador.DataMulti(numberOne, numberTwo); break;
+                    case '4': Controlador.DataDiv(numberOne, numberTwo); break;
                     case '5': Functions.Adios(); break;
                 }
             }
@@ -86,7 +86,7 @@ namespace RecupETS
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("-                                                    -");
-            Console.WriteLine("- Resultado suma:" + ResultResta);
+            Console.WriteLine("- Resultado resta:" + ResultResta);
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
 
@@ -95,16 +95,16 @@ namespace RecupETS
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("-                                                    -");
-            Console.WriteLine("- Resultado suma:" + ResultMulti);
+            Console.WriteLine("- Resultado multiplicación:" + ResultMulti);
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
-
+            Console.ReadKey();
         }
         public static void ShowDiv(decimal ResultDiv)
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("-                                                    -");
-            Console.WriteLine("- Resultado suma:" + ResultDiv);
+            Console.WriteLine("- Resultado división:" + ResultDiv);
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
 

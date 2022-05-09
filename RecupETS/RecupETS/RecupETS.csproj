@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="inclui\Interfaz.cs" />
     <Compile Include="innui\Calculadora.cs" />
+    <Compile Include="innui\Controlador.cs" />
     <Compile Include="innui\Functions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

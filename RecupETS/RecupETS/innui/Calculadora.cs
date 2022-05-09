@@ -18,8 +18,6 @@ namespace RecupETS
             decimal resultSuma = 0;
             resultSuma = numberOne + numberTwo;
 
-            Interfaz.ShowSuma(resultSuma);
-            Console.ReadKey();
             return resultSuma;
         }
 
@@ -27,8 +25,7 @@ namespace RecupETS
         {
             decimal resultResta = 0;
             resultResta = numberOne - numberTwo;
-            Interfaz.ShowResta(resultResta);
-            Console.ReadKey();
+
             return resultResta;
         }
 
@@ -37,8 +34,6 @@ namespace RecupETS
             decimal resultMulti = 0;
             resultMulti = numberOne * numberTwo;
 
-            Interfaz.ShowMulti(resultMulti);
-            Console.ReadKey();
             return resultMulti;
         }
 
@@ -49,10 +44,7 @@ namespace RecupETS
 
             if (numberTwo != 0)
             {
-                resultDiv = numberOne + numberTwo;
-
-                Interfaz.ShowDiv(resultDiv);
-                Console.ReadKey();
+                resultDiv = numberOne / numberTwo;
             }
             else
             {
