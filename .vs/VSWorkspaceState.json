@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\RecupETS",
+    "\\RecupETS\\UnitTestCalculadora"
   ],
-  "SelectedNode": "\\Class1.cs",
+  "SelectedNode": "\\RecupETS\\UnitTestCalculadora\\UnitTest1.cs",
   "PreviewInSolutionExplorer": false
 }

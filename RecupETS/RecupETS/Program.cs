@@ -8,6 +8,10 @@ namespace RecupETS
 {
     class Program
     {
+        /// <summary>
+        /// Ejecuta una calculadora
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Interfaz.Menu();       

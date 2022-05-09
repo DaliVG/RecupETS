@@ -12,7 +12,13 @@ namespace RecupETS
         public static readonly double MaxValue;
         public const double NegativeInfinity = -00;
         public const double PositiveInfinity = +00;
-
+        /// <summary>
+        /// Procede a sumar y comprueba error de fuera de rango
+        /// </summary>
+        /// <param name="numberOne"></param>
+        /// <param name="numberTwo"></param>
+        /// <param name="error"></param>
+        /// <returns>resultSuma</returns>
         public static double Suma(double numberOne, double numberTwo, ref string error)
         {
             double resultSuma = 0;
@@ -26,6 +32,13 @@ namespace RecupETS
             return resultSuma;
         }
 
+        /// <summary>
+        /// Procede a restar y comprueba error de fuera de rango
+        /// </summary>
+        /// <param name="numberOne"></param>
+        /// <param name="numberTwo"></param>
+        /// <param name="error"></param>
+        /// <returns>resultResta</returns>
         public static double Resta(double numberOne, double numberTwo, ref string error)
         {
             double resultResta = 0;
@@ -40,7 +53,13 @@ namespace RecupETS
             }
             return resultResta;
         }
-
+        /// <summary>
+        /// Procede a Multiplicar y comprueba error de fuera de rango
+        /// </summary>
+        /// <param name="numberOne"></param>
+        /// <param name="numberTwo"></param>
+        /// <param name="error"></param>
+        /// <returns>resultMulti</returns>
         public static double Multiplicacion(double numberOne, double numberTwo, ref string error)
         {
             double resultMulti = 0;
@@ -57,6 +76,13 @@ namespace RecupETS
 
             return resultMulti;
         }
+        /// <summary>
+        /// Procede a dividir y comprueba error de fuera de rango, además de comprobar la division entre cero.
+        /// </summary>
+        /// <param name="numberOne"></param>
+        /// <param name="numberTwo"></param>
+        /// <param name="error"></param>
+        /// <returns></returns>
         public static double Division(double numberOne, double numberTwo, ref string error)
         {
             double resultDiv = 0;

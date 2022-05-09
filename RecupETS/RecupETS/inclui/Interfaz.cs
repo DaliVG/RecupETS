@@ -8,6 +8,9 @@ namespace RecupETS
 {
     class Interfaz
     {
+        /// <summary>
+        /// Ejecuta el menu donde se podrá escoger que cálculo realizar
+        /// </summary>
         public static void Menu()
         {
             char opcion = ' ';
@@ -30,7 +33,10 @@ namespace RecupETS
             }
             while (opcion != '5');
         }
-
+        /// <summary>
+        /// Lee el signo para pulsar y recibe que hay que mandarle al menu
+        /// </summary>
+        /// <returns>value</returns>
         public static char Lectura()
         {
             ConsoleKeyInfo key;
@@ -53,6 +59,11 @@ namespace RecupETS
             return value;
         }
 
+        /// <summary>
+        /// Muestra el menu en consola
+        /// </summary>
+        /// <param name="numberOne"></param>
+        /// <param name="numberTwo"></param>
         private static void ShowMenu(double numberOne, double numberTwo)
         {
             Console.Clear();
@@ -72,7 +83,10 @@ namespace RecupETS
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
         }
-
+        /// <summary>
+        /// Muestra el resultado de la suma
+        /// </summary>
+        /// <param name="ResultSuma"></param>
         public static void ShowSuma(double ResultSuma)
         {
             Console.WriteLine("------------------------------------------------------");
@@ -82,6 +96,10 @@ namespace RecupETS
             Console.WriteLine("------------------------------------------------------");
 
         }
+        /// <summary>
+        /// Muestra el resultado de la resta
+        /// </summary>
+        /// <param name="ResultResta"></param>
         public static void ShowResta(double ResultResta)
         {
             Console.WriteLine("------------------------------------------------------");
@@ -89,8 +107,14 @@ namespace RecupETS
             Console.WriteLine("- Resultado resta:" + ResultResta);
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Introduzca una tecla para volver al menu");
+            Console.ReadKey(true);
 
         }
+        /// <summary>
+        /// Muestra el resultado de la multiplición
+        /// </summary>
+        /// <param name="ResultMulti"></param>
         public static void ShowMulti(double ResultMulti)
         {
             Console.WriteLine("------------------------------------------------------");
@@ -98,8 +122,13 @@ namespace RecupETS
             Console.WriteLine("- Resultado multiplicación:" + ResultMulti);
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
-            Console.ReadKey();
+            Console.WriteLine("Introduzca una tecla para volver al menu");
+            Console.ReadKey(true);
         }
+        /// <summary>
+        /// Muestra el resultado de la división
+        /// </summary>
+        /// <param name="ResultDiv"></param>
         public static void ShowDiv(double ResultDiv)
         {
             Console.WriteLine("------------------------------------------------------");
@@ -107,15 +136,21 @@ namespace RecupETS
             Console.WriteLine("- Resultado división:" + ResultDiv);
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Introduzca una tecla para volver al menu");
+            Console.ReadKey(true);
 
         }
-
+        /// <summary>
+        /// Muestra el mensaje de error
+        /// </summary>
+        /// <param name="error"></param>
         public static void ShowError(string error)
         {
             Console.WriteLine("<<<<<<<<<<<<<<<<<<<");
             Console.WriteLine("-      Error      -");
             Console.WriteLine(">>>>>>>>>>>>>>>>>>>");
             Console.WriteLine("   "+error);
+            Console.ReadKey(true);
 
         }
     }

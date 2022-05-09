@@ -8,6 +8,10 @@ namespace RecupETS
 {
     public class Functions
     {
+        /// <summary>
+        /// Funcion de pedida de numero
+        /// </summary>
+        /// <returns></returns>
         public static double AskNumbers()
         {
             double number = 0;
@@ -45,7 +49,9 @@ namespace RecupETS
 
             return number;
         }
-
+        /// <summary>
+        /// Funcion de cerrado del programa
+        /// </summary>
         public static void Adios()
         {
             Console.WriteLine("Pulse una tecla para finalizar...");
