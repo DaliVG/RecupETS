@@ -26,8 +26,8 @@ namespace UnitTestCalculadora
         public void TestMethodMaxValue1()
         {
             // Arrange 
-            double numberOne = double.MaxValue+1;
-            double numberTwo = double.MaxValue;
+            double numberOne = 1.7976931348623157E+308;
+            double numberTwo = 25;
 
             // Act
             string error = "";
