@@ -26,7 +26,7 @@ namespace UnitTestCalculadora
         public void TestMethodMaxValue1()
         {
             // Arrange 
-            decimal numberOne = decimal.MaxValue;
+            decimal numberOne = 79228162514264337593543950335m;
             decimal numberTwo = 1;
 
             // Act

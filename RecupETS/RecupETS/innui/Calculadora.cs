@@ -22,18 +22,7 @@ namespace RecupETS
             }
             catch (Exception)
             {
-                if (resultSuma > decimal.MaxValue)
-                {
-                    error = ("Fuera de rango superior.");
-                }
-                else
-                {
-                    if (resultSuma < decimal.MinValue)
-                    {
-                        error = ("Fuera de rango inferior.");
-                    }
-
-                }
+                error = ("resultado fuera de rango de memoria");
             }
 
             return resultSuma;
@@ -93,41 +82,42 @@ namespace RecupETS
 
             return resultMulti;
         }
-            public static decimal Division(decimal numberOne, decimal numberTwo, ref string error)
+        public static decimal Division(decimal numberOne, decimal numberTwo, ref string error)
+        {
+            decimal resultDiv = 0;
+
+            if (numberTwo != 0)
             {
-                decimal resultDiv = 0;
-
-                if (numberTwo != 0)
+                try
                 {
-                    try
+                    resultDiv = numberOne / numberTwo;
+
+                }
+                catch (Exception)
+                {
+                    if (resultDiv > decimal.MaxValue)
                     {
-                        resultDiv = numberOne / numberTwo;
+                        error = ("Fuera de rango superior.");
+                    }
+                    else
+                    {
+                        if (resultDiv < decimal.MinValue)
+                        {
+                            error = ("Fuera de rango inferior.");
+                        }
 
                     }
-                    catch (Exception)
-                    {
-                        if (resultDiv > decimal.MaxValue)
-                        {
-                            error = ("Fuera de rango superior.");
-                        }
-                        else
-                        {
-                            if (resultDiv < decimal.MinValue)
-                            {
-                                error = ("Fuera de rango inferior.");
-                            }
-
-                        }
-                    }
                 }
-                else
-                {
-                    resultDiv = 0;
-                    error = ("No se puede dividir entre 0.");
-                }
-
-                return resultDiv;
             }
+            else
+            {
+                resultDiv = 0;
+                error = ("No se puede dividir entre 0.");
+            }
+
+            return resultDiv;
         }
     }
 }
+
+
