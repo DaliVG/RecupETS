@@ -11,11 +11,14 @@ namespace UnitTestCalculadora
         public void TestMethodSuma1()
         {
             // Arrange 
-            decimal numberOne = 133;
-            decimal numberTwo = 522;
+            decimal numberOne = 4;
+            decimal numberTwo = 4;
 
             // Act
-            
+            decimal resultSuma = Calculadora.Suma(numberOne, numberTwo);
+
+            // Assert
+            Assert.AreEqual(resultSuma, 8);
         }
     }
 }

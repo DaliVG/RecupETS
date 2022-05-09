@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecupETS
 {
-    class Functions
+    public class Functions
     {
         public static decimal AskNumbers()
         {
@@ -17,7 +17,7 @@ namespace RecupETS
                 Console.WriteLine("Introduzca número: ");
                 if (decimal.TryParse(Console.ReadLine(), out number))
                 {
-                    if (number > Decimal.MaxValue)
+                    if (number > decimal.MaxValue)
                     {
                         Console.WriteLine("Fuera de rango superior.");
                     }

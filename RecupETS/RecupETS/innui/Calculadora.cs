@@ -6,37 +6,44 @@ using System.Threading.Tasks;
 
 namespace RecupETS
 {
-    class Calculadora
+    public class Calculadora
     {
         public static readonly decimal MinValue;
         public static readonly decimal MaxValue;
         public const decimal NegativeInfinity = -00;
         public const decimal PositiveInfinity = +00;
 
-        public static void Suma(decimal numberOne, decimal numberTwo)
+        public static decimal Suma(decimal numberOne, decimal numberTwo)
         {
             decimal resultSuma = 0;
             resultSuma = numberOne + numberTwo;
 
             Interfaz.ShowSuma(resultSuma);
+            Console.ReadKey();
+            return resultSuma;
         }
 
-        public static void Resta(decimal numberOne, decimal numberTwo)
+        public static decimal Resta(decimal numberOne, decimal numberTwo)
         {
             decimal resultResta = 0;
             resultResta = numberOne - numberTwo;
             Interfaz.ShowResta(resultResta);
+            Console.ReadKey();
+            return resultResta;
         }
 
-        public static void Multiplicacion(decimal numberOne, decimal numberTwo)
+        public static decimal Multiplicacion(decimal numberOne, decimal numberTwo)
         {
             decimal resultMulti = 0;
             resultMulti = numberOne * numberTwo;
 
             Interfaz.ShowMulti(resultMulti);
+            Console.ReadKey();
+            return resultMulti;
         }
 
-        public static void Division(decimal numberOne, decimal numberTwo)
+
+        public static decimal Division(decimal numberOne, decimal numberTwo)
         {
             decimal resultDiv = 0;
 
@@ -44,20 +51,16 @@ namespace RecupETS
             {
                 resultDiv = numberOne + numberTwo;
 
-                if (resultDiv > Decimal.MaxValue)
-                {
-
-                }
-                else
-                {
-                    Interfaz.ShowDiv(resultDiv);
-                }
+                Interfaz.ShowDiv(resultDiv);
+                Console.ReadKey();
             }
             else
             {
                 resultDiv = 0;
                 Console.WriteLine("No se puede dividir entre 0.");
             }
+
+            return resultDiv;
         }
     }
 }

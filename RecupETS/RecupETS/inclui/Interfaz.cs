@@ -14,6 +14,7 @@ namespace RecupETS
 
             do
             {
+                Console.Clear();
                 decimal numberOne = Functions.AskNumbers();
                 decimal numberTwo = Functions.AskNumbers();
                 ShowMenu(numberOne, numberTwo);
