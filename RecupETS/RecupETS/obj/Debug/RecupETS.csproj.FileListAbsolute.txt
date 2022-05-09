@@ -1,0 +1,7 @@
+C:\Users\Alumno\source\repos\RecupETS\RecupETS\RecupETS\bin\Debug\RecupETS.exe.config
+C:\Users\Alumno\source\repos\RecupETS\RecupETS\RecupETS\bin\Debug\RecupETS.exe
+C:\Users\Alumno\source\repos\RecupETS\RecupETS\RecupETS\bin\Debug\RecupETS.pdb
+C:\Users\Alumno\source\repos\RecupETS\RecupETS\RecupETS\obj\Debug\RecupETS.csproj.AssemblyReference.cache
+C:\Users\Alumno\source\repos\RecupETS\RecupETS\RecupETS\obj\Debug\RecupETS.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\source\repos\RecupETS\RecupETS\RecupETS\obj\Debug\RecupETS.exe
+C:\Users\Alumno\source\repos\RecupETS\RecupETS\RecupETS\obj\Debug\RecupETS.pdb
