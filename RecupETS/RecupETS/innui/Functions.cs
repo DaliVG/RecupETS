@@ -17,7 +17,23 @@ namespace RecupETS
                 Console.WriteLine("Introduzca número: ");
                 if (decimal.TryParse(Console.ReadLine(), out number))
                 {
-                    valido = true;
+                    if (number > Decimal.MaxValue)
+                    {
+                        Console.WriteLine("Fuera de rango superior.");
+                    }
+                    else
+                    {
+                        if (number < decimal.MinValue)
+                        {
+                            Console.WriteLine("Fuera de rango inferior.");
+                        }
+                        else
+                        {
+                            valido = true;
+                        }
+
+                    }
+
                 }
                 else
                 {

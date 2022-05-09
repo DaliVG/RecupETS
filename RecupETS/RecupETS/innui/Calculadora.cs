@@ -8,6 +8,11 @@ namespace RecupETS
 {
     class Calculadora
     {
+        public static readonly decimal MinValue;
+        public static readonly decimal MaxValue;
+        public const decimal NegativeInfinity = -00;
+        public const decimal PositiveInfinity = +00;
+
         public static void Suma(decimal numberOne, decimal numberTwo)
         {
             decimal resultSuma = 0;
@@ -38,7 +43,15 @@ namespace RecupETS
             if (numberTwo != 0)
             {
                 resultDiv = numberOne + numberTwo;
-                Interfaz.ShowDiv(resultDiv);
+
+                if (resultDiv > Decimal.MaxValue)
+                {
+
+                }
+                else
+                {
+                    Interfaz.ShowDiv(resultDiv);
+                }
             }
             else
             {

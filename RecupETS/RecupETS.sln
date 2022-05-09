@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecupETS", "RecupETS\RecupETS.csproj", "{5B56D0A0-E4AD-44CA-8583-E465394D070D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestCalculadora", "UnitTestCalculadora\UnitTestCalculadora.csproj", "{6194F659-73F6-4D97-926F-C1F9FDB002FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5B56D0A0-E4AD-44CA-8583-E465394D070D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B56D0A0-E4AD-44CA-8583-E465394D070D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B56D0A0-E4AD-44CA-8583-E465394D070D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6194F659-73F6-4D97-926F-C1F9FDB002FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6194F659-73F6-4D97-926F-C1F9FDB002FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6194F659-73F6-4D97-926F-C1F9FDB002FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6194F659-73F6-4D97-926F-C1F9FDB002FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
