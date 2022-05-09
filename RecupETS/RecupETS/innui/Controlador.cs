@@ -8,10 +8,10 @@ namespace RecupETS
 {
     class Controlador
     {
-        public static void DataSuma(decimal numberOne, decimal numberTwo)
+        public static void DataSuma(double numberOne, double numberTwo)
         {
             string error = "";
-            decimal resultSuma = Calculadora.Suma(numberOne, numberTwo, ref error);
+            double resultSuma = Calculadora.Suma(numberOne, numberTwo, ref error);
 
             if (error != "")
             {
@@ -23,20 +23,20 @@ namespace RecupETS
             }
         }
 
-        public static void DataResta(decimal numberOne, decimal numberTwo)
+        public static void DataResta(double numberOne, double numberTwo)
         {
             string error = "";
-            decimal resultResta = Calculadora.Resta(numberOne, numberTwo, ref error);
+            double resultResta = Calculadora.Resta(numberOne, numberTwo, ref error);
             
             if (error != "")
             {
-                if (resultResta > decimal.MaxValue)
+                if (resultResta > double.MaxValue)
                 {
                     Console.WriteLine("Fuera de rango superior.");
                 }
                 else
                 {
-                    if (resultResta < decimal.MinValue)
+                    if (resultResta < double.MinValue)
                     {
                         Console.WriteLine("Fuera de rango inferior.");
                     }
@@ -54,10 +54,10 @@ namespace RecupETS
             }
         }
 
-        public static void DataMulti(decimal numberOne, decimal numberTwo)
+        public static void DataMulti(double numberOne, double numberTwo)
         {
             string error = "";
-            decimal resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
+            double resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
 
             if (error != "")
             {
@@ -69,10 +69,10 @@ namespace RecupETS
             }
         }
 
-        public static void DataDiv(decimal numberOne, decimal numberTwo)
+        public static void DataDiv(double numberOne, double numberTwo)
         {
             string error = "";
-            decimal resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
+            double resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
             if (error != "")
             {
                 Interfaz.ShowDiv(resultDiv);

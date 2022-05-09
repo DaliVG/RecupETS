@@ -8,14 +8,14 @@ namespace RecupETS
 {
     public class Calculadora
     {
-        public static readonly decimal MinValue;
-        public static readonly decimal MaxValue;
-        public const decimal NegativeInfinity = -00;
-        public const decimal PositiveInfinity = +00;
+        public static readonly double MinValue;
+        public static readonly double MaxValue;
+        public const double NegativeInfinity = -00;
+        public const double PositiveInfinity = +00;
 
-        public static decimal Suma(decimal numberOne, decimal numberTwo, ref string error)
+        public static double Suma(double numberOne, double numberTwo, ref string error)
         {
-            decimal resultSuma = 0;
+            double resultSuma = 0;
             try
             {
                 resultSuma = numberOne + numberTwo;
@@ -28,9 +28,9 @@ namespace RecupETS
             return resultSuma;
         }
 
-        public static decimal Resta(decimal numberOne, decimal numberTwo, ref string error)
+        public static double Resta(double numberOne, double numberTwo, ref string error)
         {
-            decimal resultResta = 0;
+            double resultResta = 0;
             try
             {
                 resultResta = numberOne - numberTwo;
@@ -38,13 +38,13 @@ namespace RecupETS
             }
             catch (Exception)
             {
-                if (resultResta > decimal.MaxValue)
+                if (resultResta > double.MaxValue)
                 {
                     error = ("Fuera de rango superior.");
                 }
                 else
                 {
-                    if (resultResta < decimal.MinValue)
+                    if (resultResta < double.MinValue)
                     {
                         error = ("Fuera de rango inferior.");
                     }
@@ -54,9 +54,9 @@ namespace RecupETS
             return resultResta;
         }
 
-        public static decimal Multiplicacion(decimal numberOne, decimal numberTwo, ref string error)
+        public static double Multiplicacion(double numberOne, double numberTwo, ref string error)
         {
-            decimal resultMulti = 0;
+            double resultMulti = 0;
             try
             {
                 resultMulti = numberOne * numberTwo;
@@ -64,13 +64,13 @@ namespace RecupETS
             }
             catch (Exception)
             {
-                if (resultMulti > decimal.MaxValue)
+                if (resultMulti > double.MaxValue)
                 {
                     error = ("Fuera de rango superior.");
                 }
                 else
                 {
-                    if (resultMulti < decimal.MinValue)
+                    if (resultMulti < double.MinValue)
                     {
                         error = ("Fuera de rango inferior.");
                     }
@@ -82,9 +82,9 @@ namespace RecupETS
 
             return resultMulti;
         }
-        public static decimal Division(decimal numberOne, decimal numberTwo, ref string error)
+        public static double Division(double numberOne, double numberTwo, ref string error)
         {
-            decimal resultDiv = 0;
+            double resultDiv = 0;
 
             if (numberTwo != 0)
             {
@@ -95,13 +95,13 @@ namespace RecupETS
                 }
                 catch (Exception)
                 {
-                    if (resultDiv > decimal.MaxValue)
+                    if (resultDiv > double.MaxValue)
                     {
                         error = ("Fuera de rango superior.");
                     }
                     else
                     {
-                        if (resultDiv < decimal.MinValue)
+                        if (resultDiv < double.MinValue)
                         {
                             error = ("Fuera de rango inferior.");
                         }

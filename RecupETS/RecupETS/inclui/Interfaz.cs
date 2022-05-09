@@ -15,8 +15,8 @@ namespace RecupETS
             do
             {
                 Console.Clear();
-                decimal numberOne = Functions.AskNumbers();
-                decimal numberTwo = Functions.AskNumbers();
+                double numberOne = Functions.AskNumbers();
+                double numberTwo = Functions.AskNumbers();
                 ShowMenu(numberOne, numberTwo);
                 opcion = Lectura();
                 switch (opcion)
@@ -53,7 +53,7 @@ namespace RecupETS
             return value;
         }
 
-        private static void ShowMenu(decimal numberOne, decimal numberTwo)
+        private static void ShowMenu(double numberOne, double numberTwo)
         {
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
@@ -73,7 +73,7 @@ namespace RecupETS
             Console.WriteLine("------------------------------------------------------");
         }
 
-        public static void ShowSuma(decimal ResultSuma)
+        public static void ShowSuma(double ResultSuma)
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("-                                                    -");
@@ -82,7 +82,7 @@ namespace RecupETS
             Console.WriteLine("------------------------------------------------------");
 
         }
-        public static void ShowResta(decimal ResultResta)
+        public static void ShowResta(double ResultResta)
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("-                                                    -");
@@ -91,7 +91,7 @@ namespace RecupETS
             Console.WriteLine("------------------------------------------------------");
 
         }
-        public static void ShowMulti(decimal ResultMulti)
+        public static void ShowMulti(double ResultMulti)
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("-                                                    -");
@@ -100,7 +100,7 @@ namespace RecupETS
             Console.WriteLine("------------------------------------------------------");
             Console.ReadKey();
         }
-        public static void ShowDiv(decimal ResultDiv)
+        public static void ShowDiv(double ResultDiv)
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("-                                                    -");

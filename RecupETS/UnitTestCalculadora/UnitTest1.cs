@@ -11,12 +11,12 @@ namespace UnitTestCalculadora
         public void TestMethodSuma1()
         {
             // Arrange 
-            decimal numberOne = 4;
-            decimal numberTwo = 4;
+            double numberOne = 4;
+            double numberTwo = 4;
 
             // Act
             string error = "";
-            decimal resultSuma = Calculadora.Suma(numberOne, numberTwo, ref error);
+            double resultSuma = Calculadora.Suma(numberOne, numberTwo, ref error);
 
             // Assert
             Assert.AreEqual(resultSuma, 8);
@@ -26,12 +26,12 @@ namespace UnitTestCalculadora
         public void TestMethodMaxValue1()
         {
             // Arrange 
-            decimal numberOne = 79228162514264337593543950335m;
-            decimal numberTwo = 1;
+            double numberOne = 1.79769313486232308;
+            double numberTwo = 1;
 
             // Act
             string error = "";
-            decimal resultSuma = Calculadora.Suma(numberOne, numberTwo, ref error);
+            double resultSuma = Calculadora.Suma(numberOne, numberTwo, ref error);
             string noError = "";
 
             // Assert
@@ -42,12 +42,12 @@ namespace UnitTestCalculadora
         public void TestMethodResta1()
         {
             // Arrange 
-            decimal numberOne = -254;
-            decimal numberTwo = 10;
+            double numberOne = -254;
+            double numberTwo = 10;
 
             // Act
             string error = "";
-            decimal resultResta = Calculadora.Resta(numberOne, numberTwo, ref error);
+            double resultResta = Calculadora.Resta(numberOne, numberTwo, ref error);
 
             // Assert
             Assert.AreEqual(resultResta, -264);
@@ -58,13 +58,13 @@ namespace UnitTestCalculadora
         public void TestMethodMultiplicacion1()
         {
             // Arrange 
-            decimal numberOne = 123.45M;
-            decimal numberTwo = -135;
+            double numberOne = 123.45;
+            double numberTwo = -135;
 
             // Act
             string error = "";
-            decimal resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
-            decimal resultadoCorrecto = -16665.75M;
+            double resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
+            double resultadoCorrecto = -16665.75;
             // Assert
             Assert.AreEqual(resultMulti, resultadoCorrecto);
         }
@@ -73,12 +73,12 @@ namespace UnitTestCalculadora
         public void TestMethodInfinito1()
         {
             // Arrange 
-            decimal numberOne = +00M;
-            decimal numberTwo = -135;
+            double numberOne = +00;
+            double numberTwo = -135;
 
             // Act
             string error = "";
-            decimal resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
+            double resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
             // Assert
             Assert.AreEqual(double.NaN, Convert.ToDouble(resultMulti));
         }
@@ -87,13 +87,13 @@ namespace UnitTestCalculadora
         public void TestMethodDiv1()
         {
             // Arrange 
-            decimal numberOne = 48.2M;
-            decimal numberTwo = 2.25M;
+            double numberOne = 48.2;
+            double numberTwo = 2.25;
 
             // Act
             string error = "";
-            decimal resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
-            decimal resultadoCorrecto = 21.422222222222222222222222222M;
+            double resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
+            double resultadoCorrecto = 21.422222222222222222222222222;
             // Assert
             Assert.AreEqual(resultDiv, resultadoCorrecto);
         }

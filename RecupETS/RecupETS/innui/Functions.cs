@@ -8,22 +8,22 @@ namespace RecupETS
 {
     public class Functions
     {
-        public static decimal AskNumbers()
+        public static double AskNumbers()
         {
-            decimal number = 0;
+            double number = 0;
             bool valido = false;
             do
             {
                 Console.WriteLine("Introduzca número: ");
-                if (decimal.TryParse(Console.ReadLine(), out number))
+                if (double.TryParse(Console.ReadLine(), out number))
                 {
-                    if (number > decimal.MaxValue)
+                    if (number > double.MaxValue)
                     {
                         Console.WriteLine("Fuera de rango superior.");
                     }
                     else
                     {
-                        if (number < decimal.MinValue)
+                        if (number < double.MinValue)
                         {
                             Console.WriteLine("Fuera de rango inferior.");
                         }
