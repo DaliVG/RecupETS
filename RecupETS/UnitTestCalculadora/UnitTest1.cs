@@ -26,7 +26,7 @@ namespace UnitTestCalculadora
         public void TestMethodMaxValue1()
         {
             // Arrange 
-            double numberOne = double.MaxValue;
+            double numberOne = double.MaxValue+1;
             double numberTwo = double.MaxValue;
 
             // Act
@@ -64,7 +64,7 @@ namespace UnitTestCalculadora
             // Act
             string error = "";
             double resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
-            double resultadoCorrecto = -16665.75;
+            double resultadoCorrecto = 16665.75;
             // Assert
             Assert.AreEqual(resultMulti, resultadoCorrecto);
         }
