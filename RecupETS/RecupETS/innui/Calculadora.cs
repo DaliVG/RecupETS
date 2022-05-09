@@ -13,46 +13,121 @@ namespace RecupETS
         public const decimal NegativeInfinity = -00;
         public const decimal PositiveInfinity = +00;
 
-        public static decimal Suma(decimal numberOne, decimal numberTwo)
+        public static decimal Suma(decimal numberOne, decimal numberTwo, ref string error)
         {
             decimal resultSuma = 0;
-            resultSuma = numberOne + numberTwo;
+            try
+            {
+                resultSuma = numberOne + numberTwo;
+            }
+            catch (Exception)
+            {
+                if (resultSuma > decimal.MaxValue)
+                {
+                    error = ("Fuera de rango superior.");
+                }
+                else
+                {
+                    if (resultSuma < decimal.MinValue)
+                    {
+                        error = ("Fuera de rango inferior.");
+                    }
+
+                }
+            }
 
             return resultSuma;
         }
 
-        public static decimal Resta(decimal numberOne, decimal numberTwo)
+        public static decimal Resta(decimal numberOne, decimal numberTwo, ref string error)
         {
             decimal resultResta = 0;
-            resultResta = numberOne - numberTwo;
+            try
+            {
+                resultResta = numberOne - numberTwo;
 
+            }
+            catch (Exception)
+            {
+                if (resultResta > decimal.MaxValue)
+                {
+                    error = ("Fuera de rango superior.");
+                }
+                else
+                {
+                    if (resultResta < decimal.MinValue)
+                    {
+                        error = ("Fuera de rango inferior.");
+                    }
+
+                }
+            }
             return resultResta;
         }
 
-        public static decimal Multiplicacion(decimal numberOne, decimal numberTwo)
+        public static decimal Multiplicacion(decimal numberOne, decimal numberTwo, ref string error)
         {
             decimal resultMulti = 0;
-            resultMulti = numberOne * numberTwo;
+            try
+            {
+                resultMulti = numberOne * numberTwo;
+
+            }
+            catch (Exception)
+            {
+                if (resultMulti > decimal.MaxValue)
+                {
+                    error = ("Fuera de rango superior.");
+                }
+                else
+                {
+                    if (resultMulti < decimal.MinValue)
+                    {
+                        error = ("Fuera de rango inferior.");
+                    }
+
+                }
+
+
+            }
 
             return resultMulti;
         }
-
-
-        public static decimal Division(decimal numberOne, decimal numberTwo)
-        {
-            decimal resultDiv = 0;
-
-            if (numberTwo != 0)
+            public static decimal Division(decimal numberOne, decimal numberTwo, ref string error)
             {
-                resultDiv = numberOne / numberTwo;
-            }
-            else
-            {
-                resultDiv = 0;
-                Console.WriteLine("No se puede dividir entre 0.");
-            }
+                decimal resultDiv = 0;
 
-            return resultDiv;
+                if (numberTwo != 0)
+                {
+                    try
+                    {
+                        resultDiv = numberOne / numberTwo;
+
+                    }
+                    catch (Exception)
+                    {
+                        if (resultDiv > decimal.MaxValue)
+                        {
+                            error = ("Fuera de rango superior.");
+                        }
+                        else
+                        {
+                            if (resultDiv < decimal.MinValue)
+                            {
+                                error = ("Fuera de rango inferior.");
+                            }
+
+                        }
+                    }
+                }
+                else
+                {
+                    resultDiv = 0;
+                    error = ("No se puede dividir entre 0.");
+                }
+
+                return resultDiv;
+            }
         }
     }
 }

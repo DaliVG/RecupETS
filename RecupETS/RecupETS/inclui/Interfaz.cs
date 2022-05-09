@@ -59,7 +59,7 @@ namespace RecupETS
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("---------------------- CALCULADORA -------------------");
             Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("-    Número 1: "+numberOne+"    Número 2:"+numberTwo+"         ");
+            Console.WriteLine("-    Número 1: " + numberOne + "    Número 2:" + numberTwo + "         ");
             Console.WriteLine("-   Introduzca qué tipo de operación desea realizar  -");
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
@@ -107,6 +107,15 @@ namespace RecupETS
             Console.WriteLine("- Resultado división:" + ResultDiv);
             Console.WriteLine("-                                                    -");
             Console.WriteLine("------------------------------------------------------");
+
+        }
+
+        public static void ShowError(string error)
+        {
+            Console.WriteLine("<<<<<<<<<<<<<<<<<<<");
+            Console.WriteLine("-      Error      -");
+            Console.WriteLine(">>>>>>>>>>>>>>>>>>>");
+            Console.WriteLine("   "+error);
 
         }
     }

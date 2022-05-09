@@ -10,29 +10,77 @@ namespace RecupETS
     {
         public static void DataSuma(decimal numberOne, decimal numberTwo)
         {
-            decimal resultSuma = Calculadora.Suma(numberOne, numberTwo);
-            Interfaz.ShowSuma(resultSuma);
+            string error = "";
+            decimal resultSuma = Calculadora.Suma(numberOne, numberTwo, ref error);
 
+            if (error != "")
+            {
+                Interfaz.ShowSuma(resultSuma);
+            }
+            else
+            {
+                Interfaz.ShowError(error);
+            }
         }
 
         public static void DataResta(decimal numberOne, decimal numberTwo)
         {
-            decimal resultResta = Calculadora.Resta(numberOne, numberTwo);
-            Interfaz.ShowResta(resultResta);
+            string error = "";
+            decimal resultResta = Calculadora.Resta(numberOne, numberTwo, ref error);
+            
+            if (error != "")
+            {
+                if (resultResta > decimal.MaxValue)
+                {
+                    Console.WriteLine("Fuera de rango superior.");
+                }
+                else
+                {
+                    if (resultResta < decimal.MinValue)
+                    {
+                        Console.WriteLine("Fuera de rango inferior.");
+                    }
+                    else
+                    {
+                        Interfaz.ShowResta(resultResta);
+                    }
 
+                }
+
+            }
+            else
+            {
+                Interfaz.ShowError(error);
+            }
         }
 
         public static void DataMulti(decimal numberOne, decimal numberTwo)
         {
-            decimal resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo);
-            Interfaz.ShowMulti(resultMulti);
+            string error = "";
+            decimal resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
 
+            if (error != "")
+            {
+                Interfaz.ShowMulti(resultMulti);
+            }
+            else
+            {
+                Interfaz.ShowError(error);
+            }
         }
 
         public static void DataDiv(decimal numberOne, decimal numberTwo)
         {
-            decimal resultDiv = Calculadora.Division(numberOne, numberTwo);
-            Interfaz.ShowDiv(resultDiv);
+            string error = "";
+            decimal resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
+            if (error != "")
+            {
+                Interfaz.ShowDiv(resultDiv);
+            }
+            else
+            {
+                Interfaz.ShowError(error);
+            }
 
         }
 
