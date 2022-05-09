@@ -97,5 +97,19 @@ namespace UnitTestCalculadora
             // Assert
             Assert.AreEqual(Convert.ToDecimal(resultDiv), Convert.ToDecimal(resultadoCorrecto));
         }
+
+        [TestMethod]
+        public void TestMethodDivIndetermined1()
+        {
+            // Arrange 
+            double numberOne = 0;
+            double numberTwo = double.PositiveInfinity;
+
+            // Act
+            string error = "";
+            double resultDiv = Calculadora.Division(numberOne, numberTwo, ref error);
+            // Assert
+            Assert.AreEqual(double.NaN, resultDiv);
+        }
     }
 }
