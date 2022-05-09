@@ -16,11 +16,9 @@ namespace RecupETS
         public static double Suma(double numberOne, double numberTwo, ref string error)
         {
             double resultSuma = 0;
-            try
-            {
-                resultSuma = numberOne + numberTwo;
-            }
-            catch (Exception)
+            resultSuma = numberOne + numberTwo;
+
+            if (resultSuma > MaxValue || resultSuma < MinValue)
             {
                 error = ("resultado fuera de rango de memoria");
             }
