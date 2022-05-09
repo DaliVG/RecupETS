@@ -102,7 +102,7 @@ namespace UnitTestCalculadora
         public void TestMethodDivIndetermined1()
         {
             // Arrange 
-            double numberOne = 0;
+            double numberOne = double.PositiveInfinity;
             double numberTwo = double.PositiveInfinity;
 
             // Act
