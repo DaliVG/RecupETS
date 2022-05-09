@@ -70,6 +70,20 @@ namespace UnitTestCalculadora
         }
 
         [TestMethod]
+        public void TestMethodInfinito1()
+        {
+            // Arrange 
+            decimal numberOne = +00M;
+            decimal numberTwo = -135;
+
+            // Act
+            string error = "";
+            decimal resultMulti = Calculadora.Multiplicacion(numberOne, numberTwo, ref error);
+            // Assert
+            Assert.AreEqual(double.NaN, Convert.ToDouble(resultMulti));
+        }
+
+        [TestMethod]
         public void TestMethodDiv1()
         {
             // Arrange 
